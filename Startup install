@@ -1,0 +1,6 @@
+!pip install discord.py
+!pip install colorama
+!pip install Flask
+!pip install Flask-Cors
+!pip install flask_restful
+!pip install replit
