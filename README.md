@@ -21,6 +21,6 @@ The best nuking bot in the world~
 ### ?mall
 ### kicks all people on their ass
 
-# [join up before i goon you](https://discord.com/invite/5FrkNqkvPz)
+# [⚠ join up before i goon you ⚠](https://discord.gg/Duh26V9Cbd)
 # [support server](https://discord.gg/KU6Agk4u3F)
 [INFO](https://sites.google.com/view/tntubruh7770-page/discord-nuke-bot-tc?authuser=0)
