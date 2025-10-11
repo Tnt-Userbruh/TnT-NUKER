@@ -4,7 +4,7 @@ The best nuking bot in Discord?
 ### Co-directors:bluckguy , farts_smella_or_smart_fella , Treeto7king
 ### Supporters:deathmare07 , cometthewolf , youaregoddamnpathetic , novawarrior_9272
 
-<img width="360" height="360" alt="image" src="https://github.com/user-attachments/assets/61c789a0-d680-47e0-94d0-91a05e623acb" />
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/de0487a3-ce17-4415-903f-400e727a31e7" />
 
 # Commands:
 ### ?start
