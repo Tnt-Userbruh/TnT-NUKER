@@ -1,11 +1,10 @@
 # TπT NUKER v2
-The best nuking bot in the world~
-### Made with <3 by The TπTΘ Community and The TπT Raiding Organisation
+The best nuking bot in Discord?
 ### Code by:TπT_U§€®βrμh
 ### Co-directors:bluckguy , farts_smella_or_smart_fella , Treeto7king
 ### Supporters:deathmare07 , cometthewolf , youaregoddamnpathetic , novawarrior_9272
 
-<img width="1024" height="214" alt="image" src="https://github.com/user-attachments/assets/06fb802c-1d7e-4269-80ec-c9c854c4085c" />
+<img width="360" height="360" alt="image" src="https://github.com/user-attachments/assets/61c789a0-d680-47e0-94d0-91a05e623acb" />
 
 # Commands:
 ### ?start
@@ -21,6 +20,4 @@ The best nuking bot in the world~
 ### ?mall
 ### kicks all people on their ass
 
-# [⚠ join up before i goon you ⚠](https://discord.gg/Duh26V9Cbd)
-# [support server](https://discord.gg/KU6Agk4u3F)
-[INFO](https://sites.google.com/view/tntubruh7770-page/discord-nuke-bot-tc?authuser=0)
+[To start up the bot click here](https://colab.research.google.com/drive/1A8OsWDk-uzLRX65WJ58CELNuMDlH5oy4#scrollTo=XWCXNsy6zkfJ)
