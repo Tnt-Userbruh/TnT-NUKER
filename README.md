@@ -25,4 +25,4 @@ Supporters: deathmare07 , cometthewolf , youaregoddamnpathetic , novawarrior_927
 ## ?kick
 ### kick someone's ass
 
-# [source code here]([https://github.com/Tnt-Userbruh/TnT-NUKER/](https://colab.research.google.com/drive/1A8OsWDk-uzLRX65WJ58CELNuMDlH5oy4#scrollTo=u802VrHQy094))
+# [source code here](https://colab.research.google.com/drive/1A8OsWDk-uzLRX65WJ58CELNuMDlH5oy4#scrollTo=u802VrHQy094)
